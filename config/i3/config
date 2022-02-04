@@ -201,11 +201,11 @@ gaps outer 0
 
 
 # Things That Autostart
-exec_always feh --bg-scale /home/safwinator/Wallpapers/mountainside.jpg
-exec_always picom --experimental-backends -b
+exec_always --no-startup-id feh --bg-scale /home/safwinator/Wallpapers/skeleton.png
+exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id /home/safwinator/.config/polybar/launch.sh
-exec_always flameshot
-exec_always xset m 1/1
-exec_always xinput set-prop "pointer:Glorious Model O" "libinput Accel Speed" -0.94
-exec_always nm-applet
+exec_always --no-startup-id flameshot
+exec_always --no-startup-id xset m 1/1
+exec_always --no-startup-id xinput set-prop "pointer:Glorious Model O" "libinput Accel Speed" -0.94
+exec_always --no-startup-id nm-applet
 
