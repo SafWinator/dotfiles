@@ -17,15 +17,13 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #aa1E1E2E
-background-alt = #3B4252
-;foreground = ${xrdb:color7:#222}
-foreground = #D9E9EE
-foreground-alt = #434C5E
-primary = #434C5E
-secondary = #4C566A
-alert = #bd2c40
+background = #1a1b26
+background-alt = #24283b
+foreground = #ea9b1d6
+foreground-alt = #28344a
+alert = #cc241d
+Lavender-Blue = CFBFF7
+ 
 
 [bar/makc]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -57,24 +55,23 @@ module-margin-right = 5
  
 ; The separator will be inserted between the output of each module
 separator = |
-seperator-foreground= ${colors.disabled}
-
+seperator-color = ${colors.Baby-Blue}
 
 font-0 = JetBrainsMono Nerd Font:size=10;3
 font-1 = Font Awesome 5 Free:size=11;3
 font-2 = Font Awesome 5 Brands:size=11;3
 font-3 = siji:pixelsize=10;1
 
-modules-left =  i3 
-modules-center = time
-modules-right = update cpu memory pulseaudio
+modules-left = bspwm
+modules-center = time 
+modules-right =  update cpu memory pulseaudio
 
 tray-position = right
-tray-padding = 3 
+tray-padding = 10 
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
-wm-restack = i3
+wm-restack = bspwm
+;wm-restack = i3
 
 ;override-redirect = true
 
@@ -128,7 +125,7 @@ label-focused-padding = 2
 label-occupied = %index%
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -220,7 +217,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.Lavender-Blue}
 format-underline = #f90000
 label =   %percentage:2%% 
 
@@ -228,21 +225,17 @@ label =   %percentage:2%%
 [module/update]
 type = custom/script
 exec = pacman -Qu | wc -l
-interval = 1000#
-label =   %output% 
-;format-prefix = ""
+interval = 1000
+label = %output% 
+format-prefix = " "
 format-underline = #4bffdc
-format-background = ${colors.background}
-format-prefix-foreground = ${colors.background}
-
+format-foreground = ${colors.Lavender-Blue}
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-;format-prefix-foreground = ${colors.foreground}
-;format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+format-foreground = ${colors.Lavender-Blue}
 format-underline = #4bffdc
 label =   %gb_used% 
 
@@ -295,7 +288,7 @@ time= [  %H:%M ]
 time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = ${colors.background}
+format-foreground = ${colors.Lavender-Blue}
 format-underline = #0a6cf5
 
 label = %date% %time%
@@ -318,9 +311,11 @@ ramp-volume-2 = 墳
 label-muted = 婢 muted
 label-muted-padding = 2
 
+
 label-volume-foreground = ${colors.foreground}
-format-volume-foreground = ${colors.foreground}
-format-volume-padding = 2
+format-volume-foreground = ${colors.Lavender-Blue}
+format-volume-padding = 2 
+format-muted-foreground = ${colors.alert}
 format-underline = #f50a4d
 
 [module/battery]
