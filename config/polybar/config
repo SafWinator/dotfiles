@@ -54,8 +54,8 @@ module-margin-right = 5
 #radius-bottom = 10
  
 ; The separator will be inserted between the output of each module
-separator = |
-seperator-color = ${colors.Baby-Blue}
+;separator = |
+;seperator-color = ${colors.Baby-Blue}
 
 font-0 = JetBrainsMono Nerd Font:size=10;3
 font-1 = Font Awesome 5 Free:size=11;3
@@ -227,7 +227,7 @@ type = custom/script
 exec = pacman -Qu | wc -l
 interval = 1000
 label = %output% 
-format-prefix = " "
+format-prefix = " "
 format-underline = #4bffdc
 format-foreground = ${colors.Lavender-Blue}
 
@@ -238,6 +238,15 @@ format-prefix = " "
 format-foreground = ${colors.Lavender-Blue}
 format-underline = #4bffdc
 label =   %gb_used% 
+
+#[module/powermenu]
+#type = custom/text
+#content = "  "
+#content-padding = 0
+#content-foreground = ${colors.Lavender-Blue}
+#click-left = "~/.config/polybar/scripts/powermenu.sh"
+
+
 
 [module/wlan]
 type = internal/network
@@ -284,7 +293,7 @@ interval = 1
 #date =
 #date-alt = " %Y-%m-%d"
 
-time= [  %H:%M ] 
+time=  [  %H:%M ] 
 time-alt = %H:%M:%S
 
 format-prefix = 
@@ -400,4 +409,10 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
+
+
+#/* vim:ft=dosini
+#/* vim:ft=css
+
+
+ 

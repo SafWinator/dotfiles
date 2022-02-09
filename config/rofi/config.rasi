@@ -16,7 +16,7 @@ configuration {
    bg-alt: #24283b;
 
    fg: #CFBFF7;
-   fg-alt: #28344a;
+   fg-alt: #889BBF;
 
    background-color: @bg;
 
@@ -88,3 +88,6 @@ prompt {
 }
  
 
+/*
+ * vim: ft=scss
+ */
