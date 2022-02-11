@@ -62,7 +62,7 @@ font-1 = Font Awesome 5 Free:size=11;3
 font-2 = Font Awesome 5 Brands:size=11;3
 font-3 = siji:pixelsize=10;1
 
-modules-left = bspwm
+modules-left = bspwm xwindow
 modules-center = time 
 modules-right =  update cpu memory pulseaudio
 
@@ -86,7 +86,12 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:60:...%
+format-foreground = #CFBFF7
+format-padding = 0
+label-maxlen = 50
+
+
 
 [module/xkeyboard]
 type = internal/xkeyboard
