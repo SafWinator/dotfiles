@@ -9,4 +9,4 @@ git clone: https://github.com/SafWinator/dotfiles
  
  ./deploy
  
- If the polybar doesnt show do chmod +x ¬/.config/polybar/launch.sh
+ If the polybar doesnt show do chmod +x ~/.config/polybar/launch.sh
