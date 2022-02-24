@@ -5,7 +5,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 feh --bg-scale /home/safwinator/Wallpapers/evening-sky.png
 picom --experimental-backends -b
 /home/safwinator/.config/polybar/launch.sh
-flameshot
 xset m 1/1
 xinput set-prop "pointer:Glorious Model O" "libinput Accel Speed" -0.94
 nm-applet
