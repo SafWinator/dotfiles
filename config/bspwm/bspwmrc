@@ -2,7 +2,7 @@
 
 #Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-scale /home/safwinator/Wallpapers/evening-sky.png
+feh --bg-scale /home/safwinator/Wallpapers/cool1.jpg
 picom --experimental-backends -b
 /home/safwinator/.config/polybar/launch.sh
 xset m 1/1
