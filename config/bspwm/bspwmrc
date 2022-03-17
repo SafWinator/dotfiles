@@ -2,7 +2,7 @@
 
 #Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-scale /home/safwinator/Wallpapers/cool1.jpg
+feh --bg-scale /home/safwinator/Wallpapers/blockwavemoon.png
 picom --experimental-backends -b
 /home/safwinator/.config/polybar/launch.sh
 xset m 1/1
@@ -14,9 +14,9 @@ nm-applet
 bspc monitor -d 1 2 3 4 5  
 
 bspc config border_width        3 
-bspc config active_border_color "#CFBFF7"
-bspc config focused_border_color "#CFBFF7"
-bspc config normal_border_color "#CFBFF7"
+bspc config active_border_color "#fdbbfd"
+bspc config focused_border_color "#fdbbfd"
+bspc config normal_border_color "#c4a7e7"
 bspc config window_gap           7
 
 
