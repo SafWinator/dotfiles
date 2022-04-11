@@ -26,6 +26,26 @@ super + shift + {q,r}
 super + q
 	bspc node -{c,k}
 
+# Raising,Decreasing and Muting Volume
+
+# XF86AudioRaiseVolume
+#    pamixer -i 5
+
+#XF86AudioLowerVolume
+#   pamixer -d 5
+#
+#XF86AudioMute
+#   pamixer -t
+#
+
+
+# Brightness Up and Down
+
+#XF86MonBrightness{Up,Down}
+#        xbacklight -{inc,dec} 10
+#
+
+
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
