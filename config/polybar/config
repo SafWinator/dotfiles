@@ -130,7 +130,7 @@ label-focused-padding = 2
 
 label-occupied = %index%
 label-occupied-padding = 2
-label-occupied-foreground = ${colors.Magenta1}
+label-occupied-foreground = ${colors.Magenta}
 
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
@@ -357,8 +357,9 @@ adapter = ADP0
 full-at = 100
 
 format-label-foreground = ${colors.Magenta}
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging>  <label-charging>
 format-charging-underline = #ffb52a
+label-charging-foreground = ${colors.Magenta}
 
 format-discharging = <ramp-capacity>  <label-discharging>
 label-discharging = %percentage%%
