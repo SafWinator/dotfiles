@@ -8,6 +8,7 @@ picom --experimental-backends -b
 xset m 1/1
 xinput set-prop "pointer:Glorious Model O" "libinput Accel Speed" -0.94
 nm-applet
+dunst
 
 
 #bspc monitor -d I II III IV V 

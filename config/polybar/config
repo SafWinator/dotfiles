@@ -22,16 +22,18 @@ background-alt = #f8f0dc
 foreground = #d3c6aa
 foreground-alt = #5c6a72
 alert = #e67e80
-Magenta = a7c080
-Light-Magenta = 83c092
-Aqua = 7fbbb3
+Magenta = #a7c080
+Light-Magenta = #83c092
+Aqua = #87c095
+Alpha = #323d43
+
 [bar/makc]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 30
 #offset-x = 1.5%
 #offset-y = 1%
-radius = 1
+radius = 0
 
 
 background = ${colors.background}
@@ -47,7 +49,7 @@ padding-left = 0
 padding-right = 0
 
 module-margin-left = 0
-module-margin-right = 5
+module-margin-right = 0
 
 #Round
 #radius-top = 5
@@ -58,13 +60,13 @@ module-margin-right = 5
 ;seperator-color = ${colors.Baby-Blue}
 
 font-0 = JetBrainsMono Nerd Font:size=10;3
-font-1 = Font Awesome 5 Free:size=11;3
-font-2 = Font Awesome 5 Brands:size=11;3
+font-1 = Font Awesome 5 Free:size=10;3
+font-2 = Font Awesome 5 Brands:size=2;10
 font-3 = siji:pixelsize=10;1
 
 modules-left =  bspwm xwindow
 modules-center = time
-modules-right =  date  pulseaudio memory cpu
+modules-right = date pulseaudio memory cpu
 
 tray-position = right
 tray-padding = 10 
@@ -72,6 +74,7 @@ tray-padding = 10
 
 wm-restack = bspwm
 ;wm-restack = i3
+gleft = 
 
 ;override-redirect = true
 
@@ -88,8 +91,17 @@ cursor-scroll = ns-resize
 type = internal/xwindow
 label = %title:0:60:...%
 format-foreground = ${colors.Magenta}
-format-padding = 5
+format-padding = 15
 label-maxlen = 50
+
+; adding space on top of polybar
+border-top-size = 12
+border-top-color = ${color.alpha}
+border-left-size = 12
+border-left-color = ${color.alpha}
+border-right-size = 12
+border-right-color = ${color.alpha}
+
 
 
 
@@ -244,7 +256,7 @@ format-prefix = " "
 format-foreground = ${colors.Magenta}
 format-underline = #f90000
 label =   %percentage:2%% 
-format-padding = 2
+format-padding = 6
 
 
 [module/update]
@@ -263,7 +275,7 @@ format-prefix = " "
 format-foreground = ${colors.Magenta}
 format-underline = #4bffdc
 label =     %gb_used% 
-format-padding = 2
+format-padding = 6
 
 
 
@@ -318,7 +330,7 @@ time-alt = %H:%M:%S
 format-prefix = 
 format-foreground = ${colors.Magenta}
 format-underline = #0a6cf5
-format-padding = 5
+format-padding = 4
 
 
 label = %date% %time%
@@ -326,10 +338,19 @@ label = %date% %time%
 [module/date]
 type = internal/date
 interval = 1
-
 date = " %a %d %b"
 
 format-foreground = ${colors.Magenta}
+format-background = ${colors.background}
+format-padding = 6
+
+[module/sep]
+type = custom/text
+content = " "
+
+content-foreground = ${color.alpha}
+content-background = ${color.alpha}
+format-background = ${color.alpha} 
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -341,14 +362,32 @@ ramp-volume-1 = 奔
 ramp-volume-2 = 墳
 
 label-muted = 婢 muted
-label-muted-padding = 2
+label-muted-padding = 6
 
 
 label-volume-foreground = ${colors.Magenta}
 format-volume-foreground = ${colors.Magenta}
-format-volume-padding = 2
+format-volume-padding = 6
 format-muted-foreground = ${colors.alert}
 format-underline = #f50a4d
+
+[glyph]
+gleft = 
+gright = 
+
+[module/left1]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.Magenta}
+content = ${glyph.gleft}
+content-font = 2
+
+[module/right1]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.Magenta}
+content = ${glyph.gright}
+content-font = 2
 
 [module/battery]
 type = internal/battery
